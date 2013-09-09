@@ -4,14 +4,37 @@
   <title>lastfav</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+
   <%= csrf_meta_tags %>
 </head>
 
 <body>
-	<%= link_to "Home", "/" %>
-	<%= link_to "About", "/about" %>
-	
-	<%= yield %>
+	<div class="container">
+		<div class="page-header">
+          
+          <ul class="nav nav-pills pull-right">
+            <li><%= link_to "Home", "/" %></li>
+            <li><%= link_to "About", "/about" %></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                Dropdown <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <li>
+                  <a href="#">Action</a>
+                </li>
+                <li>
+                  <a href="#">Log Out</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <h1><%= link_to "lastFav", "/" %> <small>// share your favs</small></h1>
+        </div>
+		<%= yield %>
+	</div>
 
 </body>
 </html>
