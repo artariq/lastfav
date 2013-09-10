@@ -1,4 +1,4 @@
-<h1>Listing posts</h1>
+<!-- Listing posts -->
 
 <!--<table class="table">
   <thead>
@@ -27,19 +27,21 @@
       <form class="form-horizontal" role="form">
         
           <div class="form-group">
-            <label class="col-md-2 control-label">Song</label>
-            <div class="col-md-6">
-              <p class="form-control-static"><%= post.song %></p>
-            </div>
-            <label class="col-md-2 control-label">Book</label>
-            <div class="col-md-6">
-              <p class="form-control-static"><%= post.book %></p>
-            </div>
-            <label class="col-md-2 control-label">Movie</label>
-            <div class="col-md-6">
-              <p class="form-control-static"><%= post.movie %></p>
-            </div>
-            
+            <h4>
+                <label class="col-md-2 control-label">Song</label>
+                <div class="col-md-6">
+                  <p class="form-control-static"><%= post.song %></p>
+                </div>
+                <label class="col-md-2 control-label">Book</label>
+                <div class="col-md-6">
+                  <p class="form-control-static"><%= post.book %></p>
+                </div>
+                <label class="col-md-2 control-label">Movie</label>
+                <div class="col-md-6">
+                  <p class="form-control-static"><%= post.movie %></p>
+                </div>  
+            </h4>
+                      
             <div class="col-md-2 col-md-offset-2">
               <br><br>
               <p class="text-center">
@@ -47,8 +49,9 @@
               <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
               </p>
             </div>
-
           </div>
+
+          <br><br>
                
       </form>
 

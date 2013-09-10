@@ -1,0 +1,39 @@
+<div class="row">
+      
+    	<div class="col-md-3">
+      
+	        <img src="http://fc04.deviantart.net/fs70/i/2011/104/f/d/woman__s_face_reference_image_by_divasoftware-d3dzqfm.jpg" alt="..." class="img-circle" style="width: 150px">
+
+	        <h3><%= link_to 'Maddie Johnson', post %></h3>
+	        
+	        <p><small>Followers: 12</small></p>
+      	</div>
+
+      	<form class="form-horizontal" role="form">
+        
+        	<div class="form-group">
+	            <h3>
+	                <label class="col-md-2 control-label">Song</label>
+	                <div class="col-md-6">
+	                  <p class="form-control-static"><%= post.song %></p>
+	                </div>
+	                <label class="col-md-2 control-label">Book</label>
+	                <div class="col-md-6">
+	                  <p class="form-control-static"><%= post.book %></p>
+	                </div>
+	                <label class="col-md-2 control-label">Movie</label>
+	                <div class="col-md-6">
+	                  <p class="form-control-static"><%= post.movie %></p>
+	                </div>  
+	            </h3>
+	            
+	            <p class="text-muted">
+	            	<small>
+	            		Posted on <%= post.created_at.to_formatted_s(:long) %>
+	            	</small>
+	            </p>
+            </div>
+          	<br><br>
+        </form>
+
+	</div>
