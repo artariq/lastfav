@@ -1,6 +1,6 @@
 <h1>Listing posts</h1>
 
-<table>
+<!--<table class="table">
   <thead>
     <tr>
       <th>Song</th>
@@ -10,22 +10,54 @@
       <th></th>
       <th></th>
     </tr>
-  </thead>
+  </thead> -->
 
-  <tbody>
+<div class="row">
+      
     <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.song %></td>
-        <td><%= post.book %></td>
-        <td><%= post.movie %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <div class="col-md-3">
+      
+        <img src="http://fc04.deviantart.net/fs70/i/2011/104/f/d/woman__s_face_reference_image_by_divasoftware-d3dzqfm.jpg" alt="..." class="img-circle" style="width: 150px">
 
+        <h3>Maddie Johnson</h3>
+        
+        <p><small>Followers: 12</small></p>
+      </div>
+
+      <form class="form-horizontal" role="form">
+        
+          <div class="form-group">
+            <label class="col-md-2 control-label">Song</label>
+            <div class="col-md-6">
+              <p class="form-control-static"><%= post.song %></p>
+            </div>
+            <label class="col-md-2 control-label">Book</label>
+            <div class="col-md-6">
+              <p class="form-control-static"><%= post.book %></p>
+            </div>
+            <label class="col-md-2 control-label">Movie</label>
+            <div class="col-md-6">
+              <p class="form-control-static"><%= post.movie %></p>
+            </div>
+            
+            <div class="col-md-2 col-md-offset-2">
+              <br><br>
+              <p class="text-center">
+                <%= link_to 'Show', post %> <%= link_to 'Edit', edit_post_path(post) %> 
+              <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+              </p>
+            </div>
+
+          </div>
+               
+      </form>
+
+    <% end %>
+  
 <br>
 
 <%= link_to 'New Post', new_post_path %>
+
+
+</div>
+
