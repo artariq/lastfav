@@ -1,19 +1,31 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Song:</strong>
-  <%= @post.song %>
-</p>
+<div class="row">
+	<div class="col-md-6 col-md-offset-4">
+		<p>
+			<h3>
+				<strong>Song:</strong>
+		  		<%= @post.song %>		
+			</h3>
+		</p>
 
-<p>
-  <strong>Book:</strong>
-  <%= @post.book %>
-</p>
+		<p>
+			<h3>
+				<strong>Book:</strong>
+		  		<%= @post.book %>		
+			</h3>
+		  
+		</p>
 
-<p>
-  <strong>Movie:</strong>
-  <%= @post.movie %>
-</p>
+		<p>
+			<h3>
+				<strong>Movie:</strong>
+	  			<%= @post.movie %>			
+			</h3>
+		</p>
+	</div>
+</div>
+
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
