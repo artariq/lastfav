@@ -11,6 +11,7 @@
 </head>
 
 <body>
+
 	<div class="container">
 		<div class="page-header">
           
@@ -35,6 +36,7 @@
           <h1><%= link_to "lastFav", "/" %> <small>// share your favs</small></h1>
         </div>
 		<%= yield %>
+    <%= debug(params) if Rails.env.development? %>
 	</div>
 
 </body>

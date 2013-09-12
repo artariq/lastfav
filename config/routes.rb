@@ -1,6 +1,10 @@
 Lastfav::Application.routes.draw do
-  resources :posts
+  resources :users
+  
+  match '/signup',  to: 'users#new',            via: 'get'
 
+  resources :posts
+  
   root 'pages#home'
   get "about" => 'pages#about'
   
